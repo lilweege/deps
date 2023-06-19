@@ -11,7 +11,7 @@
 #if defined(PACMAN)
 #define COMMAND_FORMAT "pacman -Qi '%s' | grep Depends | cut -d: -f2"
 #elif defined(APTITUDE)
-#error TODO
+#define COMMAND_FORMAT "apt-cache depends '%s' | grep Depends | cut -d: -f2"
 #else
 #error "No package manager defined!"
 #endif
